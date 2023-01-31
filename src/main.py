@@ -15,7 +15,7 @@ def main():
     application.add_handler(CommandHandler("start", telegramBotApi.firstLaunch))
     application.add_handler(MessageHandler(filters.TEXT, telegramBotApi.handlerMessages))
 
-    # keep_alive()
+    keep_alive()
     application.run_polling()
 
 
