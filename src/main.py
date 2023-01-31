@@ -13,7 +13,7 @@ def main():
 
     application = Application.builder().token(Constants.botToken).build()
     application.add_handler(CommandHandler("start", telegramBotApi.firstLaunch))
-    application.add_handler(MessageHandler(filters.TEXT, telegramBotApi.getAnswerToQuestion))
+    application.add_handler(MessageHandler(filters.TEXT, telegramBotApi.handlerMessages))
 
     # keep_alive()
     application.run_polling()
