@@ -1,0 +1,10 @@
+class CommandsBot:
+    current = "Выбери команду из списка кнопок"
+    default = "Выбери команду из списка кнопок"
+    askQuestion = "Задать вопрос"
+    getPictureOnRequest = "Получить картинку по запросу"
+    settings = "Настройки"
+    choose = "Выбирай"
+    settingsCreativityAI = "Креативность ИИ в ответах на вопросы"
+    settingsAmountImages = "Количество выдаваемых фотографий"
+    defaultSettings = "Настройки по умолчанию"
