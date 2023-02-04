@@ -3,22 +3,21 @@ import telegram
 from telegram import InlineKeyboardButton
 from src.texts.callback_commands_bot import CallbackCommandsBot
 from src.texts.commands_bot import CommandsBot
-from src.data.api.telegramBotApi.telegram_bot_api import TelegramBotApi
 
 
-class TelegramBotApiButtons(TelegramBotApi):
-    def getSettingsButton(self):
+class TelegramBotApiButtons:
+    def getSettingsButton(self, temperature, amountImages):
         return telegram.InlineKeyboardMarkup(
             inline_keyboard=[
                 [
                     InlineKeyboardButton(
-                        f"{CommandsBot.settingsCreativityAI} ({self.settingsAI.temperature})",
+                        f"{CommandsBot.settingsCreativityAI} ({temperature})",
                         callback_data=CallbackCommandsBot.settingsCreativityAI
                     )
                 ],
                 [
                     InlineKeyboardButton(
-                        f"{CommandsBot.settingsAmountImages} ({self.settingsAI.amountImages})",
+                        f"{CommandsBot.settingsAmountImages} ({amountImages})",
                         callback_data=CallbackCommandsBot.settingsAmountImages
                     )
                 ],

@@ -48,7 +48,13 @@ class TelegramBotApi(TelegramBotApiButtons):
             await update.message.reply_text(Answers.enterText)
         elif update.message.text == CommandsBot.settings:
             CommandsBot.current = CommandsBot.default
-            await update.message.reply_text(CommandsBot.choose, reply_markup=self.getSettingsButton())
+            await update.message.reply_text(
+                CommandsBot.choose,
+                reply_markup=self.getSettingsButton(
+                    self.settingsAI.temperature,
+                    self.settingsAI.amountImages
+                )
+            )
         elif CommandsBot.current == CommandsBot.settingsCreativityAI:
             result = self.settingsAI.setTemperature(value=float(update.message.text))
             if result:
