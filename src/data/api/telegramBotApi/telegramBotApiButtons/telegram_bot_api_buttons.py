@@ -3,10 +3,10 @@ import telegram
 from telegram import InlineKeyboardButton
 from src.texts.callback_commands_bot import CallbackCommandsBot
 from src.texts.commands_bot import CommandsBot
-from src.data.api.telegram_bot_api.telegram_bot_api import TelegramBotApi
+from src.data.api.telegramBotApi.telegram_bot_api import TelegramBotApi
 
 
-class TelegramBotButtons(TelegramBotApi):
+class TelegramBotApiButtons(TelegramBotApi):
     def getSettingsButton(self):
         return telegram.InlineKeyboardMarkup(
             inline_keyboard=[

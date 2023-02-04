@@ -1,16 +1,15 @@
 from telegram import Update, InputMediaPhoto
 from telegram.ext import ContextTypes, CallbackContext
-
 from src.texts.callback_commands_bot import CallbackCommandsBot
 from src.texts.commands_bot import CommandsBot
 from src.data.api.openai_api import OpenaiApi
-from src.data.api.telegram_bot_api.telegram_bot_buttons.telegram_bot_buttons import TelegramBotButtons
+from src.data.api.telegramBotApi.telegramBotApiButtons.telegram_bot_api_buttons import TelegramBotApiButtons
 from src.data.api.translator_api import TranslatorApi
 from src.settings_ai import SettingsAI
 from src.texts.answers import Answers
 
 
-class TelegramBotApi(TelegramBotButtons):
+class TelegramBotApi(TelegramBotApiButtons):
     translatorApi: TranslatorApi
     openaiApi: OpenaiApi
     settingsAI: SettingsAI

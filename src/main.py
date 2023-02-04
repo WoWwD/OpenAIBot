@@ -1,7 +1,7 @@
 from telegram.ext import Application, CommandHandler, MessageHandler, filters, CallbackQueryHandler
 from src.constants import Constants
 from src.data.api.openai_api import OpenaiApi
-from src.data.api.telegram_bot_api.telegram_bot_api import TelegramBotApi
+from src.data.api.telegramBotApi.telegram_bot_api import TelegramBotApi
 from src.data.api.translator_api import TranslatorApi
 from src.settings_ai import SettingsAI
 
